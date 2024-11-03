@@ -9,9 +9,11 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff00ff, #00ffff); /* ネオンカラーのグラデーション */
             color: white;
             text-align: center;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite; /* 背景グラデーションのアニメーション */
         }
 
         /* バナー画像のスタイル */
@@ -41,6 +43,28 @@
             font-size: 3em;
             margin-top: 20px;
         }
+
+        /* 背景グラデーションアニメーション */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* パルスエフェクトの追加 */
+        .pulse-element {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(255,255,255,0.1);
+            animation: pulseEffect 2s infinite;
+        }
+
+        @keyframes pulseEffect {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
@@ -50,7 +74,7 @@
 
     <!-- コンテンツエリア -->
     <div class="content">
-        <h1>Reverie Neon</h1>
+        <h1 class="pulse-element">Reverie Neon</h1>
 
         <!-- リンクまとめ -->
         <p>🌐 <a href="https://reverieneon71.my.canva.site/">公式HP</a></p>
@@ -67,8 +91,8 @@
 
         <h2>◇Podcast：月真猫 真月里の映画場</h2>
         <p>🎧 <a href="https://open.spotify.com/show/1153LH93uOBgnnKT3KxiLH?si=781575dd27ce4701&nd=1&dlsi=a752e174d74941a4">Spotify</a></p>
-        <p>🍏 <a href="https://podcasts.apple.com/jp/podcast/%E6%9C%88%E7%9C%9F%E7%8C%AB%E7%9C%9F%E6%9C%88%E9%87%8C%E3%81%AE%E6%98%A0%E7%94%BB%E5%A0%B4/id1775065637">Apple Music</a></p>
-        <p>📦 <a href="https://music.amazon.co.jp/podcasts/ee9d259b-e9cc-49ad-9a30-7e33d616cc9d/%E6%9C%88%E7%9C%9F%E7%8C%AB%E7%9C%9F%E6%9C%88%E9%87%8C%E3%81%AE%E6%98%A0%E7 %94%B5 %A5 %A5 %A5 %A5 %A5 %A5">Amazon Music</a></p>
+        <p>🍏 <a href="https://podcasts.apple.com/jp/podcast/%E6%9C%88%E7%9C%9F%E7%8C%AB%E7%9C%9F%E6%9C%88%E9%87%8C%E3%81%AE%E6%98%A0%E7%94%B5%E5%A0%B4/id1775065637">Apple Music</a></p>
+        <p>📦 <a href="https://music.amazon.co.jp/podcasts/ee9d259b-e9cc-49ad-9a30-7e33d616cc9d/%E6%9C%88%E7%9C%9F%E7%8C%AB%E7%9C%9F%E6%9C%88%E9 %87 %8C%E3 %81 %AE%E6 %98%A0%E7 %94%B5 %A5 %A5">Amazon Music</a></p>
     </div>
 
 </body>
